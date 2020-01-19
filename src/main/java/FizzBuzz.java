@@ -1,4 +1,3 @@
-import java.util.concurrent.Semaphore;
 import java.util.function.IntConsumer;
 
 public class FizzBuzz {
