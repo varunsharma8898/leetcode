@@ -1,5 +1,7 @@
 import java.util.Stack;
 
+import org.junit.Assert;
+
 public class BaseballGame {
 
     public int calPoints(String[] ops) {
@@ -37,13 +39,10 @@ public class BaseballGame {
         BaseballGame game = new BaseballGame();
 
         String[] input1 = { "5", "2", "C", "D", "+" };
-        int result1 = game.calPoints(input1);
-        System.out.println(result1); //30
+        Assert.assertEquals(30, game.calPoints(input1));
 
         String[] input2 = { "5", "-2", "4", "C", "D", "9", "+", "+" };
-        int result2 = game.calPoints(input2);
-        System.out.println(result2); //27
-
+        Assert.assertEquals(27, game.calPoints(input2));
     }
 
 /*
