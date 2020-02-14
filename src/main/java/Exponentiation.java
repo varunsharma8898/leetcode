@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 public class Exponentiation {
 
     public double myPow(double a, int n) {
@@ -26,9 +28,8 @@ public class Exponentiation {
 
     public static void main(String[] args) {
         Exponentiation expo = new Exponentiation();
-
-        System.out.println("2 ** 10 => Expected: " + 1024.000 + " Got: " + expo.myPow(2.00000, 10));
-        System.out.println("2 ** -2 => Expected: " + 0.25 + " Got: " + expo.myPow(2.00000, -2));
+        Assert.assertEquals(1024.000, expo.myPow(2.00000, 10), 0.001);
+        Assert.assertEquals(0.25, expo.myPow(2.00000, -2), 0.001);
     }
 
 }
