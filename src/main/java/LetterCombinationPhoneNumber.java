@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
+
 public class LetterCombinationPhoneNumber {
 
     public List<String> letterCombinations(String digits) {
@@ -9,7 +11,7 @@ public class LetterCombinationPhoneNumber {
             return result;
         }
         StringBuilder builder = new StringBuilder();
-        String[] mappings = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        String[] mappings = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
         dfs(digits, 0, result, builder, mappings);
 
         return result;
@@ -31,15 +33,15 @@ public class LetterCombinationPhoneNumber {
 
     public static void main(String[] args) {
         LetterCombinationPhoneNumber lc = new LetterCombinationPhoneNumber();
-        List<String> result = lc.letterCombinations("22");
-        System.out.println(result);
+        List<String> result = lc.letterCombinations("23");
+        Assert.assertArrayEquals(new String[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" }, result.toArray());
     }
 
 
     /*
-    *
-    * Input: "23"
-    * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-    * */
+     *
+     * Input: "23"
+     * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+     * */
 
 }
