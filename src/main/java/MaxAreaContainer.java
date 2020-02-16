@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 public class MaxAreaContainer {
 
     MaxAreaContainer() {
@@ -25,6 +27,6 @@ public class MaxAreaContainer {
     public static void main(String[] args) {
         MaxAreaContainer mac = new MaxAreaContainer();
         int result = mac.maxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 });
-        System.out.println(result);
+        Assert.assertEquals(49, result);
     }
 }
