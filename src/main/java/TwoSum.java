@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
+
 public class TwoSum {
-
-
 
     /*
     * Given an array of integers, return indices of the two numbers such that
@@ -50,15 +50,15 @@ public class TwoSum {
 
         int[] list = { 2, 7, 11, 15 };
         int[] indexes = twoSum(list, 9);
-        System.out.println(Arrays.toString(indexes));
+        Assert.assertArrayEquals(new int[] { 0, 1 }, indexes);
 
         int[] list2 = { 3, 2, 4 };
         int[] indexes2 = twoSum(list2, 6);
-        System.out.println(Arrays.toString(indexes2));
+        Assert.assertArrayEquals(new int[] { 1, 2 }, indexes2);
 
         int[] list3 = { -3, 4, 3, 90 };
         int[] indexes3 = twoSum(list3, 0);
-        System.out.println(Arrays.toString(indexes3));
+        Assert.assertArrayEquals(new int[] { 0, 2 }, indexes3);
 
     }
 
