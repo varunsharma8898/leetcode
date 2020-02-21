@@ -30,11 +30,30 @@ public class ArrayOfDoubledPairs {
         return true;
     }
 
+    public boolean canReorderDoubledUsingPriorityQueue(int[] arr) {
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>((Comparator.comparingInt(Math::abs)));
+//        PriorityQueue<Integer> pq = new PriorityQueue<>(((o1, o2) -> Math.abs(o1) - Math.abs(o2)));
+
+        for (int i : arr) {
+            pq.offer(i);
+        }
+
+        while (!pq.isEmpty()) {
+            int num = pq.poll();
+            if (!pq.remove(num * 2)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         ArrayOfDoubledPairs adp = new ArrayOfDoubledPairs();
         List<TestCase> testCases = getTestCases();
         for (TestCase testCase : testCases) {
             Assert.assertEquals(testCase.expected, adp.canReorderDoubled(testCase.input));
+            Assert.assertEquals(testCase.expected, adp.canReorderDoubledUsingPriorityQueue(testCase.input));
         }
     }
 
