@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -32,8 +31,8 @@ public class ArrayOfDoubledPairs {
 
     public boolean canReorderDoubledUsingPriorityQueue(int[] arr) {
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((Comparator.comparingInt(Math::abs)));
-//        PriorityQueue<Integer> pq = new PriorityQueue<>(((o1, o2) -> Math.abs(o1) - Math.abs(o2)));
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.comparingInt(Math::abs));
+//        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> Math.abs(o1) - Math.abs(o2));
 
         for (int i : arr) {
             pq.offer(i);
