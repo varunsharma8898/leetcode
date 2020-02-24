@@ -5,35 +5,31 @@ public class LongestPalindromicSubstring {
     private int low, maxLength;
 
     public String longestPalindrome(String s) {
+        if (s.length() < 2) {
+            return s;
+        }
+        low = 0;
+        maxLength = 0;
 
-        String longestSubstring = "";
-        int maxLength = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            int oddLength = isPalindrome(s, i, i);
-            int evenLength = isPalindrome(s, i, i + 1);
-
-            if (maxLength < oddLength) {
-                maxLength = oddLength;
-                int movePositions = oddLength / 2;
-                longestSubstring = s.substring(i - movePositions, i + movePositions + 1);
-            }
-            if (maxLength < evenLength) {
-                maxLength = evenLength;
-                int movePositions = evenLength / 2;
-                longestSubstring = s.substring(i - movePositions + 1, i + movePositions + 1);
-            }
+        for (int i = 0; i < s.length() - 1; i++) {
+            expandPalindrome(s, i, i);     // odd
+            expandPalindrome(s, i, i + 1); // even
         }
 
-        return longestSubstring;
+        return s.substring(low, low + maxLength);
     }
 
-    private int isPalindrome(String s, int left, int right) {
+    private void expandPalindrome(String s, int left, int right) {
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
         }
-        return right - left - 1;
+
+        int length = right - left - 1;
+        if (maxLength < length) {
+            low = left + 1;
+            maxLength = length;
+        }
     }
 
     public static void main(String[] args) {
