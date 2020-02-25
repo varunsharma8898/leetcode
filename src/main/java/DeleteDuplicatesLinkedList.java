@@ -16,6 +16,26 @@ public class DeleteDuplicatesLinkedList {
         return head;
     }
 
+    public ListNode deleteDuplicatesRecursive(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        // if current node and its next are duplicates, skip them until we find a unique node
+        // call recursively on the unique node found.
+        if (head.next != null && head.val == head.next.val) {
+            while (head.next != null && head.val == head.next.val) {
+                head = head.next;
+            }
+            return deleteDuplicatesRecursive(head);
+        } else {
+
+            // check if the next elements are duplicates recursively
+            head.next = deleteDuplicatesRecursive(head.next);
+        }
+        return head;
+    }
+
     private void printLinkedList(ListNode node) {
         StringBuilder sb = new StringBuilder();
         while (node != null) {
@@ -32,6 +52,11 @@ public class DeleteDuplicatesLinkedList {
         dd.printLinkedList(head);
         head = dd.deleteDuplicates(head);
         dd.printLinkedList(head);
+
+        ListNode head2 = getTestData();
+        dd.printLinkedList(head2);
+        head2 = dd.deleteDuplicatesRecursive(head2);
+        dd.printLinkedList(head2);
     }
 
     private static ListNode getTestData() {
