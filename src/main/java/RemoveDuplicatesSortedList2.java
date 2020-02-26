@@ -34,6 +34,22 @@ public class RemoveDuplicatesSortedList2 {
         return dummy.next;
     }
 
+    public ListNode deleteDuplicatesRecursive(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        if (head.next != null && head.val == head.next.val) {
+            while (head.next != null && head.val == head.next.val) {
+                head = head.next;
+            }
+            return deleteDuplicatesRecursive(head.next);
+        } else {
+            head.next = deleteDuplicatesRecursive(head.next);
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         RemoveDuplicatesSortedList2 dd = new RemoveDuplicatesSortedList2();
 
@@ -41,6 +57,11 @@ public class RemoveDuplicatesSortedList2 {
         dd.printLinkedList(head);
         ListNode head2 = dd.deleteDuplicates(head);
         dd.printLinkedList(head2);
+
+        ListNode head3 = getTestData();
+        dd.printLinkedList(head3);
+        ListNode head4 = dd.deleteDuplicatesRecursive(head3);
+        dd.printLinkedList(head4);
     }
 
     private static ListNode getTestData() {
