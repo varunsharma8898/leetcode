@@ -24,9 +24,27 @@ public class ProductOfArrayExceptSelf {
         return products;
     }
 
+    public int[] productExceptSelfOptimized(int[] nums) {
+        int length = nums.length;
+        int[] products = new int[length];
+
+        products[0] = 1;
+        for (int i = 1; i < length; i++) {
+            products[i] = products[i - 1] * nums[i - 1];
+        }
+
+        int right = 1;
+        for (int i = length - 1; i >= 0; i--) {
+            products[i] = products[i] * right;
+            right = right * nums[i];
+        }
+        return products;
+    }
+
     public static void main(String[] args) {
         ProductOfArrayExceptSelf poa = new ProductOfArrayExceptSelf();
         Assert.assertArrayEquals(new int[] { 24, 12, 8, 6 }, poa.productExceptSelf(new int[] { 1, 2, 3, 4 }));
+        Assert.assertArrayEquals(new int[] { 24, 12, 8, 6 }, poa.productExceptSelfOptimized(new int[] { 1, 2, 3, 4 }));
 
     }
 }
