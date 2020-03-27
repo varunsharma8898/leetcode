@@ -16,6 +16,22 @@ public class BestTimeToBuySellStock {
         return maxProfit;
     }
 
+    public int maxProfit2(int[] prices) {
+        if (prices == null || prices.length < 2) {
+            return 0;
+        }
+        int profit = 0;
+        int lowPrice = prices[0];
+        for (int price : prices) {
+            if (price < lowPrice) {
+                lowPrice = price;
+            } else {
+                profit = Math.max(price - lowPrice, profit);
+            }
+        }
+        return profit;
+    }
+
     public static void main(String[] args) {
         BestTimeToBuySellStock b = new BestTimeToBuySellStock();
         Assert.assertEquals(5, b.maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
@@ -24,6 +40,13 @@ public class BestTimeToBuySellStock {
         Assert.assertEquals(1, b.maxProfit(new int[] { 1, 2 }));
         Assert.assertEquals(0, b.maxProfit(null));
         Assert.assertEquals(3, b.maxProfit(new int[] { 2, 1, 4 }));
+
+        Assert.assertEquals(5, b.maxProfit2(new int[] { 7, 1, 5, 3, 6, 4 }));
+        Assert.assertEquals(0, b.maxProfit2(new int[] { 7, 6, 4, 3, 1 }));
+        Assert.assertEquals(0, b.maxProfit2(new int[] { 1, 1 }));
+        Assert.assertEquals(1, b.maxProfit2(new int[] { 1, 2 }));
+        Assert.assertEquals(0, b.maxProfit2(null));
+        Assert.assertEquals(3, b.maxProfit2(new int[] { 2, 1, 4 }));
     }
 
     /**
