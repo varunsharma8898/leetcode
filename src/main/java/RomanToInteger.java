@@ -17,6 +17,37 @@ public class RomanToInteger {
 
         int returnVal = 0;
         for (int i = 0; i < s.length(); i++) {
+            char curr = s.charAt(i);
+            char next = 0;
+            if (i + 1 < s.length()) next = s.charAt(i + 1);
+
+            // cant do a null check or char here as null char is actually stored as \0 in Java
+            if (next != 0) {
+                if (symbols.get(next) > symbols.get(curr)) {
+                    returnVal += symbols.get(next) - symbols.get(curr);
+                    i++;
+                } else {
+                    returnVal += symbols.get(curr);
+                }
+            } else {
+                returnVal += symbols.get(curr);
+            }
+        }
+        return returnVal;
+    }
+
+    public int romanToIntBruteForce(String s) {
+        Map<Character, Integer> symbols = new HashMap<>();
+        symbols.put('I', 1);
+        symbols.put('V', 5);
+        symbols.put('X', 10);
+        symbols.put('L', 50);
+        symbols.put('C', 100);
+        symbols.put('D', 500);
+        symbols.put('M', 1000);
+
+        int returnVal = 0;
+        for (int i = 0; i < s.length(); i++) {
             switch (s.charAt(i)) {
                 case 'I':
                     if (i + 1 < s.length() && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X' || s.charAt(i + 1) == 'M')) {
