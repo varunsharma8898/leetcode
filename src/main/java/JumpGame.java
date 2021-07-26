@@ -18,4 +18,13 @@ public class JumpGame {
         return true;
     }
 
+    public boolean canJump_rightToLeft(int[] nums) {
+        int target = nums.length - 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (i + nums[i] >= target) {
+                target = i;
+            }
+        }
+        return target == 0;
+    }
 }
