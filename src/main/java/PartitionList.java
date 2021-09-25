@@ -35,7 +35,7 @@ public class PartitionList {
         }
 
         before.next = dummyAfter.next;
-        after.next = null;
+        after.next = null;              // most imp line - do not forget
 
         return dummyBefore.next;
     }
