@@ -40,14 +40,16 @@ public class ValidPalindrome {
 
         String str = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
 
-        int len = str.length() - 1;
-        int end = len;
+        int len = str.length();
+        int end = len  - 1;
         for (int i = 0; i < len / 2; i++) {
-            if (str.charAt(i) == str.charAt(len)) {
+            if (str.charAt(i) == str.charAt(end)) {
                 end--;
+            } else {
+                return false;
             }
         }
-        return false;
+        return true;
 
     }
 
