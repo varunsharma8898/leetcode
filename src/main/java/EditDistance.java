@@ -17,7 +17,7 @@ public class EditDistance {
             res[0][i] = i;
         }
 
-        // levinshtein's algo
+        // levenshtein's algo
         // if char matches, put replace val
         // else put = 1 + min (replace, delete, insert)
 

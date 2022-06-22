@@ -38,6 +38,7 @@ public class IntegerToEnglishWords {
 
     public static void main(String[] args) {
         IntegerToEnglishWords itew = new IntegerToEnglishWords();
+        Assert.assertEquals("One Million", itew.numberToWords(1000000));
         Assert.assertEquals("One Hundred Twenty Three", itew.numberToWords(123));
         Assert.assertEquals("Twelve Thousand Three Hundred Forty Five", itew.numberToWords(12345));
         Assert.assertEquals("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven", itew.numberToWords(1234567));
