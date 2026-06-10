@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+import org.junit.Assert;
+
 public class ReconstructItinerary {
 
     public List<String> findItinerary(List<List<String>> tickets) {
@@ -56,5 +58,6 @@ public class ReconstructItinerary {
         List<String> itinerary = ri.findItinerary(input);
 
         System.out.println(itinerary);
+        Assert.assertEquals("[JFK, MUC, LHR, SFO, SJC]", itinerary.toString());
     }
 }

@@ -14,11 +14,11 @@ public class BinaryTreeMaxPathSum {
             return 0;
         }
 
-        int leftSum = Math.max(0, sum(node.left));
-        int rightSum = Math.max(0, sum(node.right));
+        int leftSum = Math.max(0, sum(node.left));    // notice we're using max(0, dfs()) here
+        int rightSum = Math.max(0, sum(node.right));  // notice we're using max(0, dfs()) here
 
-        max = Math.max(max, leftSum + rightSum + node.val);
-        return Math.max(leftSum, rightSum) + node.val;
+        max = Math.max(max, leftSum + rightSum + node.val);  // max will have left + right + root
+        return Math.max(leftSum, rightSum) + node.val;       // while returning we can take only one branch, either left or right
     }
 
     public static void main(String[] args) {

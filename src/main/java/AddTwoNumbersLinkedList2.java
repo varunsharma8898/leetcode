@@ -22,7 +22,7 @@ public class AddTwoNumbersLinkedList2 {
         }
 
         int sum = 0;
-        ListNode sentinell = new ListNode(-1);
+        ListNode sentinel = new ListNode(-1);
         while (!s1.isEmpty() || !s2.isEmpty()) {
             sum /= 10;
             if (!s1.isEmpty()) {
@@ -32,20 +32,20 @@ public class AddTwoNumbersLinkedList2 {
                 sum += s2.pop();
             }
             int val = sum % 10;
-            addToFront(val, sentinell);
+            addToFront(val, sentinel);
         }
         if (sum / 10 == 1) {
-            addToFront(1, sentinell);
+            addToFront(1, sentinel);
         }
 
-        return sentinell.next;
+        return sentinel.next;
     }
 
-    private void addToFront(int val, ListNode sentinell) {
+    private void addToFront(int val, ListNode sentinel) {
         ListNode curr = new ListNode(val);
-        ListNode next = sentinell.next;
+        ListNode next = sentinel.next;
 
-        sentinell.next = curr;
+        sentinel.next = curr;
         curr.next = next;
     }
     /**

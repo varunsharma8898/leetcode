@@ -14,7 +14,7 @@ public class IslandPerimeter {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                if (grid[i][j] == 0) {
+                if (grid[i][j] == 0) { // v-imp step
                     continue;
                 }
                 int connections = 4;

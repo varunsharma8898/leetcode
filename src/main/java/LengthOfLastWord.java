@@ -7,16 +7,15 @@ public class LengthOfLastWord {
 
     Pattern pat = Pattern.compile("\\s?(\\w+)\\s?$");
     public int lengthOfLastWord(String s) {
-        Matcher matcher = pat.matcher(s);
-        if (matcher.matches()) {
-            String ss = matcher.group(1);
-            if (ss.isEmpty()) {
-                return 0;
+        int count = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == ' ') {
+                if (count > 0) return count;
             } else {
-                return ss.length();
+                count++;
             }
         }
-        return 0;
+        return count;
     }
 
     public static void main(String[] args) {

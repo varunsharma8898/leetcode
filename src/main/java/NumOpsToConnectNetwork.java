@@ -20,8 +20,8 @@ public class NumOpsToConnectNetwork {
         if (n > connections.length + 1) return -1;             // v-imp
 
         Map<Integer, List<Integer>> adjList = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            adjList.put(i, new ArrayList<>());
+        for (int i = 0; i < n; i++) { // loop over till n, not connections.length - v-imp
+            adjList.putIfAbsent(i, new ArrayList<>());
         }
         for (int[] connection: connections) {
             adjList.get(connection[0]).add(connection[1]);

@@ -33,6 +33,10 @@ public class CombinationSum {
         System.out.println(arr);
 
         /**
+         *
+         * The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the
+         * frequency of at least one of the chosen numbers is different.
+         *
          * Expected:
          * [[2, 2, 3], [7]]
          * */

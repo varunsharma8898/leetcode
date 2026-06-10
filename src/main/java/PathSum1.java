@@ -11,7 +11,7 @@ public class PathSum1 {
 
         val += node.val;
         if (node.left == null && node.right == null) {
-            return sum == val ? true : false;
+            return sum == val;
         }
         boolean left = traverseDown(node.left, sum, val);
         boolean right = traverseDown(node.right, sum, val);

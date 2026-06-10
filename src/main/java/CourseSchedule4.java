@@ -12,7 +12,7 @@ public class CourseSchedule4 {
      * - Time: O(n^3)
      * - Space: O(n^2)
      *
-     * More Floy-warshall problems:
+     * More Floyd-warshall problems:
      * - 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance
      */
     public List<Boolean> checkIfPrerequisite(int n, int[][] prerequisites, int[][] queries) {

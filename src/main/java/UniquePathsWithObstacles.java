@@ -21,4 +21,19 @@ public class UniquePathsWithObstacles {
         map.put(key, val);
         return val;
     }
+
+
+    private int dfs1(int m, int n, int[][] obs, Map<String, Integer> map) {
+        int rows = obs.length, cols = obs[0].length;
+        if (obs[m][n] == 1) return 0;
+        String key = m + "-" + n;
+        if (map.containsKey(key)) return map.get(key);
+        if (m == rows - 1 && n == cols - 1) return 1;
+
+        int val = 0;
+        if (m+1 < rows) val += dfs1(m+1, n, obs, map);
+        if (n+1 < cols) val += dfs1(m, n+1, obs, map);
+        map.put(key, val);
+        return val;
+    }
 }

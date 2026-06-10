@@ -30,7 +30,7 @@ public class ValidPalindrome {
         return maxLen == len;
     }
 
-    public boolean isPalindrome(String s) {
+    public boolean isPalindrome2(String s) {
         if (s == null) {
             return false;
         }
@@ -51,6 +51,27 @@ public class ValidPalindrome {
         }
         return true;
 
+    }
+
+
+    private boolean isPalindrome(String s) {
+        if (s == null) {
+            return false;
+        }
+        if (s.isEmpty()) {
+            return true;
+        }
+
+        String word = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+        int left = 0, right = word.length() - 1;
+        while (left <= right) {
+            if (word.charAt(left) != word.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 
     public static void main(String[] args) {

@@ -3,27 +3,29 @@ import org.junit.Assert;
 public class ReverseLinkedList2 {
 
     public ListNode reverseBetween(ListNode head, int left, int right) {
+        ListNode sentinel = new ListNode(-1);   // v-imp
+        sentinel.next = head;                       // v-imp
+
         int count = 1;
-        ListNode prev = null;
-        ListNode node = head;
+        ListNode prev = sentinel;
+        ListNode curr = head;
+        ListNode next = null;
         while (count < left) {
+            prev = curr;
+            curr = curr.next;
             count++;
-            prev = node;
-            node = node.next;
         }
 
-
-        ListNode curr = node;
-        ListNode next = null;
-
-        while (count < right) {
+        ListNode dummy = prev;                      // v-imp
+        while (count <= right) {
             next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
             count++;
         }
-        prev.next = curr.next;
+        dummy.next.next = curr;     // v-imp
+        dummy.next = prev;          // v-imp
         return head;
     }
 

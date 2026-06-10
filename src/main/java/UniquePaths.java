@@ -38,4 +38,16 @@ public class UniquePaths {
         Assert.assertEquals(28, up.uniquePaths(3, 7));
         Assert.assertEquals(28, up.uniquePathsDP(3, 7));
     }
+
+
+    private int dfsHelper(int m, int n, Map<String, Integer> map) {
+        String key = m + "-" + n;
+        if (map.containsKey(key)) return map.get(key);
+        if (m == 1 && n == 1) return 1;
+        if (m == 0 || n == 0) return 0;
+
+        int val = dfsHelper(m-1, n, map) + dfsHelper(m, n-1, map);
+        map.put(key, val);
+        return val;
+    }
 }

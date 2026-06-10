@@ -13,19 +13,10 @@ public class MaxProductSubarray {
         int result = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
-            int tmp = max;
-            max = Math.max(Math.max(max * nums[i], min * nums[i]), nums[i]);
-            min = Math.min(Math.min(tmp * nums[i], min * nums[i]), nums[i]);
-
-            if (max > result) {
-                result = max;
-            }
-//            maxProducts[i] = Math.max(nums[i], nums[i] * maxProducts[i - 1]);
-//            maxProducts[i] = Math.max(maxProducts[i], nums[i] * minProducts[i - 1]);
-//            minProducts[i] = Math.min(nums[i], nums[i] * minProducts[i - 1]);
-//            minProducts[i] = Math.min(minProducts[i], nums[i] * maxProducts[i - 1]);
-//
-//            maxProduct = Math.max(maxProduct, maxProducts[i]);
+            int tmp = max;                                                    // keep a copy of max
+            max = Math.max(Math.max(max * nums[i], min * nums[i]), nums[i]);  // find out max
+            min = Math.min(Math.min(tmp * nums[i], min * nums[i]), nums[i]);  // find out min, notice tmp here instead of max
+            result = Math.max(max, result);
         }
         return result;
     }
@@ -58,5 +49,6 @@ public class MaxProductSubarray {
         MaxProductSubarray mps = new MaxProductSubarray();
         Assert.assertEquals(6, mps.maxProduct(new int[] { 2, 3, -2, 4 }));
         Assert.assertEquals(0, mps.maxProduct(new int[] { -2, 0, -1 }));
+        Assert.assertEquals(1280, mps.maxProduct(new int[] { 1,2,-1,-2,2,1,-2,1,4,-5,4 }));
     }
 }

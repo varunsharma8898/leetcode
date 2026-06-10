@@ -23,6 +23,8 @@ public class BusRoutes {
             }
         }
 
+        if (!map.containsKey(source) || !map.containsKey(target)) return -1;
+
         HashSet<Integer> visited = new HashSet<>();
         Queue<Integer> q = new LinkedList<>();
 

@@ -4,8 +4,8 @@ public class AddTwoNumbersLinkedList {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-        ListNode sentinell = new ListNode(-1);
-        ListNode head = sentinell;
+        ListNode sentinel = new ListNode(-1);
+        ListNode head = sentinel;
         int sum = 0;
         while (l1 != null || l2 != null) {
             sum /= 10;
@@ -25,7 +25,7 @@ public class AddTwoNumbersLinkedList {
             head.next = new ListNode(1);
         }
 
-        return sentinell.next;
+        return sentinel.next;
     }
 
     /**

@@ -24,17 +24,18 @@ public class BestTimeToBuySellStock3 {
 
 
     private int maxProfit(int[] prices) {
-        if (prices == null || prices.length < 2) return 0;
-
-        int onebuy = Integer.MAX_VALUE, twobuy = Integer.MAX_VALUE;
-        int onesell = 0, twosell = 0;
-        for (int price : prices) {
-            onebuy = Math.min(onebuy, price);
-            onesell = Math.max(onesell, price - onebuy);
-            twobuy = Math.min(twobuy, price - onesell);
-            twosell = Math.max(twosell, price - twobuy);
+        if (prices == null || prices.length < 2) {
+            return 0;
         }
-        return twosell;
+        int oneBuy = Integer.MAX_VALUE, twoBuy = Integer.MAX_VALUE;
+        int oneSell = 0, twoSell = 0;
+        for (int curr : prices) {
+            oneBuy = Math.min(oneBuy, curr);
+            oneSell = Math.max(oneSell, curr - oneBuy);
+            twoBuy = Math.min(twoBuy, curr - oneSell);
+            twoSell = Math.max(twoSell, curr - twoBuy);
+        }
+        return twoSell;
     }
 
     public static void main(String[] args) {

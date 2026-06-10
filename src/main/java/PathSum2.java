@@ -13,7 +13,7 @@ public class PathSum2 {
     private void helper(TreeNode root, int target, List<List<Integer>> result, List<Integer> currentPath) {
 
         if (root == null) return;
-        int curr = target-root.val;
+        int curr = target - root.val;
 
         // if (curr < 0) return;
         if (root.left == null && root.right == null) {

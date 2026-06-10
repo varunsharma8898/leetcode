@@ -4,17 +4,17 @@ public class EditDistance {
 
     public int minDistance(String word1, String word2) {
         int m = word1.length(), n = word2.length();
-        if (m == 0 || n == 0) {
+        if (m == 0 || n == 0) {             // v-imp
             return Math.max(m, n);
         }
 
         // initialize with default values in row0 and col0
         int[][] res = new int[m + 1][n + 1];
         for (int i = 0; i <= m; i++) {
-            res[i][0] = i;
+            res[i][0] = i; // v-imp, assign i not one
         }
         for (int i = 0; i <= n; i++) {
-            res[0][i] = i;
+            res[0][i] = i; // v-imp, assign i not one
         }
 
         // levenshtein's algo
@@ -42,6 +42,8 @@ public class EditDistance {
     public static void main(String[] args) {
         EditDistance ed = new EditDistance();
         Assert.assertEquals(3, ed.minDistance("horse", "ros"));
+        Assert.assertEquals(0, ed.minDistance("a", "a"));
+        Assert.assertEquals(9, ed.minDistance("distance", "springbok"));
     }
 
 }

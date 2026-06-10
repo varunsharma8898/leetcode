@@ -26,6 +26,10 @@ public class CombinationSum2 {
         }
     }
 
+    /**
+     * Each number in candidates may only be used once in the combination.
+     * Note: The solution set must not contain duplicate combinations.
+     * **/
     public static void main(String[] args) {
         CombinationSum2 cs = new CombinationSum2();
         List<List<Integer>> arr = cs.combinationSum2(new int[] { 10, 1, 2, 7, 6, 1, 5 }, 8);

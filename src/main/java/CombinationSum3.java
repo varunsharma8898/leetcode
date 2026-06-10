@@ -25,6 +25,16 @@ public class CombinationSum3 {
         }
     }
 
+    /**
+     * Find all valid combinations of k numbers that sum up to n such that the following conditions are true:
+     *
+     * Only numbers 1 through 9 are used.
+     * Each number is used at most once.
+     *
+     * Return a list of all possible valid combinations.
+     * The list must not contain the same combination twice, and the combinations may be returned in any order.
+     *
+     * */
     public static void main(String[] args) {
         CombinationSum3 cs3 = new CombinationSum3();
         Assert.assertEquals("[[1, 2, 4]]", cs3.combinationSum3(3, 7).toString());

@@ -3,7 +3,7 @@ public class ReverseInteger {
     public int reverse(int x) {
         int i = 0;
         int MAX = Integer.MAX_VALUE; //2,147,483,647 -- 214,748,364
-        int MIN = Integer.MIN_VALUE; //-2,147,483,647
+        int MIN = Integer.MIN_VALUE; //-2,147,483,648
         while (Math.abs(x) > 0) {
             if (i > MAX / 10 || i == MAX && x % 10 > 7) {
                 return 0;

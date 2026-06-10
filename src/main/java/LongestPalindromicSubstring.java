@@ -39,6 +39,7 @@ public class LongestPalindromicSubstring {
         Assert.assertEquals("a", lps.longestPalindrome("a"));
         Assert.assertEquals("bb", lps.longestPalindrome("bb"));
         Assert.assertEquals("bab", lps.longestPalindrome("zrsbabad"));
+        Assert.assertEquals("bab", lps.longestPalindrome("babad"));
         Assert.assertEquals("racecar", lps.longestPalindrome("racecar"));
         Assert.assertEquals("tattarrattat", lps.longestPalindrome("tattarrattat"));
     }

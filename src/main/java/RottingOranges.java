@@ -2,7 +2,7 @@ import org.junit.Assert;
 
 public class RottingOranges {
 
-    public int orangesRotting(int[][] grid) {
+    public int orangesRotting1(int[][] grid) {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == 2) {
@@ -77,6 +77,35 @@ public class RottingOranges {
                 { 1 },
                 { 1 },
         }));
+    }
+
+    private int orangesRotting(int[][] grid) {
+        int m = grid.length, n = grid[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 2) {
+                    dfs1(grid, i, j, 2);
+                }
+            }
+        }
+        int max = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) return -1;
+                max = Math.max(max, grid[i][j]);
+            }
+        }
+        return max > 2 ? max - 2 : 0;
+    }
+
+    private void dfs1(int[][] grid, int i, int j, int day) {
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) return;
+        if (grid[i][j] == 0 || (grid[i][j] > 1 && grid[i][j] < day)) return;
+        grid[i][j] = day;
+        dfs1(grid, i+1, j, day + 1);
+        dfs1(grid, i-1, j, day + 1);
+        dfs1(grid, i, j+1, day + 1);
+        dfs1(grid, i, j-1, day + 1);
     }
 
     /**

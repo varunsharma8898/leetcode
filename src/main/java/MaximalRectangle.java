@@ -5,7 +5,7 @@ import org.junit.Assert;
 public class MaximalRectangle {
 
     // Easiest solution is to copy code from maxRectangleInHistogram and pass the heights array to it.
-    public int maximalRectangle(char[][] matrix) {
+    public int maximalRectangle1(char[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
             return 0;
         }
@@ -76,4 +76,27 @@ public class MaximalRectangle {
                 { '1', '0', '0', '1', '0' }
         }));
     }
+
+    public int maximalRectangle(char[][] matrix) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return 0;
+        int maxArea = 0;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        int[] heights = new int[cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] == '1') {
+                    heights[j]++;
+                } else {
+                    heights[j] = 0;
+                }
+            }
+            maxArea = Math.max(maxArea, largestRectangleArea(heights));
+        }
+
+        return maxArea;
+    }
+
+
 }
