@@ -9,9 +9,19 @@ import java.util.Set;
 
 import org.junit.Assert;
 
-import com.sun.tools.javac.util.Pair;
-
 public class CurrencyConversion {
+
+    /** Simple pair replacement for JDK-internal com.sun.tools.javac.util.Pair. */
+    static class Pair<A, B> {
+        final A fst;
+        final B snd;
+
+        Pair(A fst, B snd) {
+            this.fst = fst;
+            this.snd = snd;
+        }
+    }
+
 
     public static double getRatio(String start, String end, List<Node> data) {
         Map<String, Map<String, Double>> adjList = new HashMap<>();
