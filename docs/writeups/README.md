@@ -32,7 +32,7 @@ Open on GitHub mobile, or clone and browse in any markdown reader.
 | Math / bit | [math-bit](math-bit/) | [191](math-bit/0191-number-of-1-bits.md) |
 | Concurrency | [concurrency](concurrency/) | [1115](concurrency/1115-print-foobar-alternately.md) |
 
-**Total:** 24 writeups
+**Total:** 27 writeups
 
 ## Template
 
