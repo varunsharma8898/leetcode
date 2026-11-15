@@ -37,3 +37,10 @@ mvn test
 
 - **Plan:** [docs/staff-principal-coding-prep.md](docs/staff-principal-coding-prep.md)
 - **Progress tracker:** [Staff+ Coding Interview Tracker](https://cursor.com/canvas/store-acc0b5be-2a72-4e4c-806e-a62775fef0e4/b41ed50b-870f-4138-9aa2-aa70305eb67f) (interactive canvas)
+
+## Mobile revision writeups (sample)
+
+Short phone-friendly notes for a few problems (problem, intuition, approach, complexity, variations):
+
+- **Index:** [docs/writeups/README.md](docs/writeups/README.md)
+- **Template:** [docs/writeups/_TEMPLATE.md](docs/writeups/_TEMPLATE.md)
