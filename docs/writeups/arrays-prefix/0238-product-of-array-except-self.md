@@ -2,7 +2,7 @@
 
 **Pattern:** Prefix / suffix products  
 **Difficulty:** Medium  
-**Code:** [`ProductOfArrayExceptSelf.java`](../../src/main/java/ProductOfArrayExceptSelf.java)
+**Code:** [`ProductOfArrayExceptSelf.java`](../../../src/main/java/ProductOfArrayExceptSelf.java)
 
 ---
 

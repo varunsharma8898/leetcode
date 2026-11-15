@@ -2,7 +2,7 @@
 
 **Pattern:** Topological sort (Kahn’s BFS)  
 **Difficulty:** Medium  
-**Code:** [`CourseSchedule.java`](../../src/main/java/CourseSchedule.java)
+**Code:** [`CourseSchedule.java`](../../../src/main/java/CourseSchedule.java)
 
 ---
 
@@ -66,7 +66,7 @@ return count == numCourses;
 
 | Variant | Change in approach |
 |---|---|
-| **Course Schedule II** ([`CourseSchedule2.java`](../../src/main/java/CourseSchedule2.java)) | Same BFS; append nodes to `result[]` as you dequeue; return order or `[]` if cycle |
+| **Course Schedule II** ([`CourseSchedule2.java`](../../../src/main/java/CourseSchedule2.java)) | Same BFS; append nodes to `result[]` as you dequeue; return order or `[]` if cycle |
 | **DFS cycle detect** | 3-color / recursion stack; cycle ⇒ false |
 | **Course Schedule IV** | Reachability queries after transitive closure / topo DP |
 | **Alien Dictionary** | Same topo idea on character graph; detect cycle + incomplete alphabet carefully |
