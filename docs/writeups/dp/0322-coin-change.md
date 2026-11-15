@@ -2,7 +2,7 @@
 
 **Pattern:** DP — unbounded knapsack / min coins  
 **Difficulty:** Medium  
-**Code:** [`CoinChange.java`](../../src/main/java/CoinChange.java)
+**Code:** [`CoinChange.java`](../../../src/main/java/CoinChange.java)
 
 ---
 

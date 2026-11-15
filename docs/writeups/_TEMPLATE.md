@@ -1,8 +1,10 @@
 # LC {number} — {Title}
 
+<!-- Save under docs/writeups/{pattern-folder}/0xxx-slug.md -->
+
 **Pattern:** {pattern}  
 **Difficulty:** Easy | Medium | Hard  
-**Code:** [`{ClassName}.java`](../../src/main/java/{ClassName}.java)
+**Code:** [`{ClassName}.java`](../../../src/main/java/{ClassName}.java)
 
 ---
 

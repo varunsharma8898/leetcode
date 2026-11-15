@@ -2,7 +2,7 @@
 
 **Pattern:** Prefix / suffix max (two-pass)  
 **Difficulty:** Hard  
-**Code:** [`TrappingRainWater.java`](../../src/main/java/TrappingRainWater.java)
+**Code:** [`TrappingRainWater.java`](../../../src/main/java/TrappingRainWater.java)
 
 ---
 
