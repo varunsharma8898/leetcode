@@ -1,5 +1,3 @@
 # Backtracking
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: combination sum, permutations, phone letters, palindrome partition, word search.
+- [LC 39 — Combination Sum](0039-combination-sum.md)

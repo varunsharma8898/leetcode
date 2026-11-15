@@ -1,5 +1,5 @@
 # BFS / DFS (grid & graph)
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: islands, rotting oranges, surrounded regions, word ladder, clone graph.
+- [LC 127 — Word Ladder](0127-word-ladder.md)
+- [LC 200 — Number of Islands](0200-number-of-islands.md)
+- [LC 994 — Rotting Oranges](0994-rotting-oranges.md)

@@ -1,5 +1,3 @@
 # Heap / top-K
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: top-K frequent, kth largest, merge k lists, streaming median.
+- [LC 692 — Top K Frequent Words](0692-top-k-frequent-words.md)

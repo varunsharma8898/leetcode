@@ -1,5 +1,4 @@
 # Stack / monotonic
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: next greater, daily temperatures, histogram rectangle, calculators.
+- [LC 84 — Largest Rectangle in Histogram](0084-largest-rectangle-in-histogram.md)
+- [LC 739 — Daily Temperatures](0739-daily-temperatures.md)

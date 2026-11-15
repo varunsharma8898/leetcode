@@ -1,5 +1,4 @@
 # Strings / trie
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: anagrams, trie, word dictionary, word search II, autocomplete.
+- [LC 49 — Group Anagrams](0049-group-anagrams.md)
+- [LC 208 — Implement Trie](0208-implement-trie.md)

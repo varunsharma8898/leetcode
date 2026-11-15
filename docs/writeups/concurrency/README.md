@@ -1,5 +1,3 @@
 # Concurrency
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: FizzBuzz threads, FooBar, H2O, ZeroEvenOdd.
+- [LC 1115 — Print FooBar Alternately](1115-print-foobar-alternately.md)

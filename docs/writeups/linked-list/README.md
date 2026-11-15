@@ -1,5 +1,4 @@
 # Linked list
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: reverse, cycle, merge, reorder, k-group, random pointer.
+- [LC 142 — Linked List Cycle II](0142-linked-list-cycle-ii.md)
+- [LC 206 — Reverse Linked List](0206-reverse-linked-list.md)

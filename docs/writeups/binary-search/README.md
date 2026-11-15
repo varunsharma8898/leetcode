@@ -1,5 +1,4 @@
 # Binary search
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: rotated arrays, first/last position, answer-space search (Koko, capacity).
+- [LC 33 — Search in Rotated Sorted Array](0033-search-in-rotated-sorted-array.md)
+- [LC 153 — Find Minimum in Rotated Sorted Array](0153-find-minimum-in-rotated-sorted-array.md)

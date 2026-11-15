@@ -1,5 +1,3 @@
 # Math / bit
 
-No writeups yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here when adding one.
-
-Typical themes: reverse integer, powers of two/three, bit counts, roman/excel conversions.
+- [LC 191 — Number of 1 Bits](0191-number-of-1-bits.md)
