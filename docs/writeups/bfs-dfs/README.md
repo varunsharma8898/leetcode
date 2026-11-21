@@ -5,4 +5,6 @@
 - [LC 133 — Clone Graph](0133-clone-graph.md)
 - [LC 200 — Number of Islands](0200-number-of-islands.md)
 - [LC 329 — Longest Increasing Path in a Matrix](0329-longest-increasing-path.md)
+- [LC 695 — Max Area of Island](0695-max-area-of-island.md)
+- [LC 841 — Keys and Rooms](0841-keys-and-rooms.md)
 - [LC 994 — Rotting Oranges](0994-rotting-oranges.md)
